@@ -11,14 +11,25 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <ListView Grid.Row="0"
-                      x:Name="NoteList"/>
+                      ItemsSource="{Binding ListOfNotes}"/>
+            
+            
+            
+            
             <TextBox Grid.Row="1"
                      x:Name="NoteTextBox"
                      Style="{StaticResource NoteView.Textbox.Theme}"
-                     KeyDown="{Binding TextBox_KeyDown}"
                      />
+            
+            
+            
+            
+            <Button Grid.Row="2"
+                    Content="Post"
+                    x:Name="PostNote"/>
         </Grid>
 
     </Border>

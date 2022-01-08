@@ -8,7 +8,12 @@ namespace TheNoteTaker_WPF_UI.MVVM.Models
 {
     public class NoteModel
     {
-        public DateTime TimePosted { get; set; }
-        public string Note { get; set; }
+        public DateTime TimePosted { get; set; } = DateTime.Now;
+        public string Note { get; set; } = "";
+
+        public override string ToString()
+        {
+            return TimePosted.ToString("F") + Environment.NewLine + Note;
+        }
     }
 }

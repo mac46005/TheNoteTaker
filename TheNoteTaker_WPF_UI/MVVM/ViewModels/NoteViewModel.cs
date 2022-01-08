@@ -12,6 +12,10 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
 {
     public class NoteViewModel : Screen
     {
+        public NoteViewModel()
+        {
+            ListOfNotes = new ObservableCollection<NoteModel>();
+        }
         private ObservableCollection<NoteModel> _listofNotes;
 
         public ObservableCollection<NoteModel> ListOfNotes
@@ -24,6 +28,12 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
             }
         }
 
+
+
+
+
+
+
         private string _noteTextBox;
 
         public string NoteTextBox
@@ -35,6 +45,31 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
                 NotifyOfPropertyChange(() => NoteTextBox);
             }
         }
+
+
+
+
+
+
+        public void PostNote()
+        {
+            NoteModel noteModel = new NoteModel();
+            noteModel.Note = NoteTextBox;
+            ListOfNotes.Add(noteModel);
+            NoteTextBox = string.Empty;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
