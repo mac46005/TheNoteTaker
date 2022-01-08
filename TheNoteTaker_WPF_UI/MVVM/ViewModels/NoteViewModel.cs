@@ -42,7 +42,7 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
         {
             if (e.Key == Key.Enter)
             {
-                Console.WriteLine();
+                Console.WriteLine("Enter presses");
             }
         }
     }
