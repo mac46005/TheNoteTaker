@@ -12,11 +12,12 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <Viewbox>
-                <ListView/>
-            </Viewbox>
+            <ListView Grid.Row="0"
+                      x:Name="NoteList"/>
             <TextBox Grid.Row="1"
-                     Style="{StaticResource NoteView.Textbox.Theme}"/>
+                     x:Name="NoteTextBox"
+                     Style="{StaticResource NoteView.Textbox.Theme}"
+                     KeyDown="{Binding TextBox_KeyDown}"/>
         </Grid>
 
     </Border>
