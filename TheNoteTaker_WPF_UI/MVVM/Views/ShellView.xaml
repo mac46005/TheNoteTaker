@@ -10,9 +10,31 @@
         AllowsTransparency="True"
         Background="Transparent"
         ResizeMode="NoResize">
-    <Border>
+    <Border Style="{StaticResource ShellView.Border.Theme}"
+            MouseDown="Border_MouseDown">
         <Grid>
-            
+            <Grid.ColumnDefinitions>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Label Content="Note Taker"/>
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Right"
+                            Margin="0,0,1,0">
+                    <Button Content="_"
+                            Click="MinimizeButton_Click"/>
+                    <Button Content="O"
+                            Click="MaximizeButton_Click"/>
+                    <Button Content="X"
+                            Click="CloseButton_Click"/>
+                </StackPanel>
+            </Grid>
+            <ContentControl Grid.Row="1" x:Name="ActiveItem"/>
         </Grid>
     </Border>
 </Window>

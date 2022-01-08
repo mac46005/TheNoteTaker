@@ -2,8 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style TargetType="{x:Type Border}"
            x:Key="ShellView.Border.Theme">
-        <Setter Property="">
-            
-        </Setter>
+        <Setter Property="Background" Value="#595959"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        
+        
     </Style>
 </ResourceDictionary>

@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using TheNoteTaker_WPF_UI.MVVM.ViewModels;
 
 namespace TheNoteTaker_WPF_UI
 {
     public class Bootstrapper : BootstrapperBase
     {
         SimpleContainer _container = new SimpleContainer();
+
+        public Bootstrapper()
+        {
+            Initialize();
+        }
 
         protected override void Configure()
         {
@@ -26,6 +33,10 @@ namespace TheNoteTaker_WPF_UI
                 .Where(t => t.Name.EndsWith("ViewModel"))
                 .ToList()
                 .ForEach(vm => _container.RegisterPerRequest(vm, vm.ToString(), vm));
+        }
+        protected override void OnStartup(object sender, StartupEventArgs e)
+        {
+            DisplayRootViewFor<ShellViewModel>();
         }
 
         protected override object GetInstance(Type service, string key)
