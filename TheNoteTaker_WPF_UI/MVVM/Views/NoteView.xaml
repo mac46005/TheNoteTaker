@@ -18,16 +18,17 @@
 
 
 
-
-            <Border Grid.Row="1"
+            <!--<Border Grid.Row="1"
                     Style="{StaticResource NoteViewTheme.TextBoxBorder}">
                 <TextBox x:Name="NoteText"
                          Style="{StaticResource NoteTextBox}"/>
-            </Border>
-            
-            
-            
-            
+            </Border>-->
+            <TextBox Grid.Row="1"
+                     x:Name="NoteText"
+                     Template="{StaticResource TextBox}"/>
+
+
+
             <Button Grid.Row="2"
                     Content="Post"
                     x:Name="PostNote"/>

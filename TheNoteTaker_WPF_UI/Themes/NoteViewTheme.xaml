@@ -14,4 +14,13 @@
         <Setter Property="Padding" Value="2"/>
         <Setter Property="Background" Value="#33333333"/>
     </Style>
+
+
+    <ControlTemplate TargetType="TextBox"
+                     
+                     x:Key="TextBox">
+        <Border Padding="5">
+            <TextBox/>
+        </Border>
+    </ControlTemplate>
 </ResourceDictionary>
