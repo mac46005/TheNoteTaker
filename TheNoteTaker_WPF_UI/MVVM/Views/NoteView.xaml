@@ -15,14 +15,15 @@
             </Grid.RowDefinitions>
             <ListView Grid.Row="0"
                       ItemsSource="{Binding ListOfNotes}"/>
-            
-            
-            
-            
-            <TextBox Grid.Row="1"
-                     x:Name="NoteTextBox"
-                     Style="{StaticResource NoteView.Textbox.Theme}"
-                     />
+
+
+
+
+            <Border Grid.Row="1"
+                    Style="{StaticResource NoteViewTheme.TextBoxBorder}">
+                <TextBox x:Name="NoteText"
+                         Style="{StaticResource NoteTextBox}"/>
+            </Border>
             
             
             

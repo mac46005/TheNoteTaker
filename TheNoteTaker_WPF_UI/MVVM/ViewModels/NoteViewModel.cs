@@ -36,13 +36,13 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
 
         private string _noteTextBox;
 
-        public string NoteTextBox
+        public string NoteText
         {
             get { return _noteTextBox; }
             set 
             {
                 _noteTextBox = value;
-                NotifyOfPropertyChange(() => NoteTextBox);
+                NotifyOfPropertyChange(() => NoteText);
             }
         }
 
@@ -54,9 +54,9 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
         public void PostNote()
         {
             NoteModel noteModel = new NoteModel();
-            noteModel.Note = NoteTextBox;
+            noteModel.Note = NoteText;
             ListOfNotes.Add(noteModel);
-            NoteTextBox = string.Empty;
+            NoteText = string.Empty;
         }
 
 
