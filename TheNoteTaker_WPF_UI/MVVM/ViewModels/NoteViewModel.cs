@@ -20,7 +20,10 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
 
         public ObservableCollection<NoteModel> ListOfNotes
         {
-            get { return _listofNotes; }
+            get 
+            { 
+                return _listofNotes; 
+            }
             set 
             {
                 _listofNotes = value;
@@ -34,14 +37,17 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
 
 
 
-        private string _noteTextBox;
+        private string _noteText;
 
         public string NoteText
         {
-            get { return _noteTextBox; }
+            get 
+            { 
+                return _noteText; 
+            }
             set 
             {
-                _noteTextBox = value;
+                _noteText = value;
                 NotifyOfPropertyChange(() => NoteText);
             }
         }

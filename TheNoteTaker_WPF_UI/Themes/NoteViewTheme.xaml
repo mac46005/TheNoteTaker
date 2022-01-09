@@ -7,20 +7,31 @@
         <Setter Property="Background" Value="Black"/>
         <Setter Property="Foreground" Value="Lime"/>
     </Style>
-    
-    
+
+
     <Style TargetType="Border"
            x:Key="NoteViewTheme.TextBoxBorder">
         <Setter Property="Padding" Value="2"/>
         <Setter Property="Background" Value="#33333333"/>
     </Style>
 
+    <Style TargetType="{x:Type ListView}"
+           x:Key="NoteViewTheme.ListView">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListView}">
+                    <Border Padding="5">
+                        <ListView ItemsSource="{TemplateBinding ItemsSource}"
+                                  Background="#4554"
+                                  Foreground="Red"
+                                  FontSize="20"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-    <ControlTemplate TargetType="TextBox"
-                     
-                     x:Key="TextBox">
-        <Border Padding="5">
-            <TextBox/>
-        </Border>
-    </ControlTemplate>
+
+
+
 </ResourceDictionary>

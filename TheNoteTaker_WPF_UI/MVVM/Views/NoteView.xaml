@@ -5,7 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TheNoteTaker_WPF_UI.MVVM.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:cal="http://www.caliburnproject.org">
+    
     <Border>
         <Grid>
             <Grid.RowDefinitions>
@@ -14,24 +16,23 @@
                 <RowDefinition Height="20"/>
             </Grid.RowDefinitions>
             <ListView Grid.Row="0"
-                      ItemsSource="{Binding ListOfNotes}"/>
+                      ItemsSource="{Binding ListOfNotes}"
+                      Style="{StaticResource NoteViewTheme.ListView}"/>
 
 
 
-            <!--<Border Grid.Row="1"
+            <Border Grid.Row="1"
                     Style="{StaticResource NoteViewTheme.TextBoxBorder}">
                 <TextBox x:Name="NoteText"
-                         Style="{StaticResource NoteTextBox}"/>
-            </Border>-->
-            <TextBox Grid.Row="1"
-                     x:Name="NoteText"
-                     Template="{StaticResource TextBox}"/>
+                         Style="{StaticResource NoteTextBox}">
+                    
+                </TextBox>
+            </Border>
 
 
 
-            <Button Grid.Row="2"
-                    Content="Post"
-                    x:Name="PostNote"/>
+            <Button Grid.Row="2">
+            </Button>
         </Grid>
 
     </Border>
