@@ -19,7 +19,7 @@ namespace TheNoteTaker_WPF_UI.MVVM.ViewModels
 
         public MainViewModel()
         {
-
+            ViewModel = new ToDoInterfaceViewModel();
         }
     }
 }

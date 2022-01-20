@@ -5,13 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheNoteTaker_WPF_UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800"
+        Title="MainWindow" Height="400" Width="800"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
+        xmlns:viewModels="clr-namespace:TheNoteTaker_WPF_UI.MVVM.ViewModels"
         >
+    <Window.DataContext>
+        <viewModels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
         <Border Background=" #4d4dff"
                 CornerRadius="15">
@@ -22,7 +26,7 @@
                     <RowDefinition Height="60"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <ContentControl Grid.Row="1"/>
+                <ContentControl Grid.Row="1" Content="{Binding ViewModel}"/>
             </Grid>
         </Border>
     </Grid>

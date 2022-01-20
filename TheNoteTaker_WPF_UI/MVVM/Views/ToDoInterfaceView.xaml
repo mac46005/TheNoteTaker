@@ -18,13 +18,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid>
-                <ItemsControl ItemsSource="{Binding ToDoList}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <CheckBox Content="{Binding Name}"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+                <ListView ItemsSource="{Binding ToDoSourceCollection}">
+                    
+                </ListView>
             </Grid>
             <Grid>
                 
@@ -32,7 +28,9 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBox/>
+            <TextBox KeyDown="{Binding }"
+                     >
+            </TextBox>
         </Grid>
     </Grid>
 </UserControl>
