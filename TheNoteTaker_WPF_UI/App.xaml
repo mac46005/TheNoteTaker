@@ -5,12 +5,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary>
-                    <local:Bootstrapper x:Key="Bootstrapper"/>
-                </ResourceDictionary>
-                
-                <ResourceDictionary Source="Themes/ShellViewThemes.xaml"/>
-                <ResourceDictionary Source="Themes/NoteViewTheme.xaml"/>
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

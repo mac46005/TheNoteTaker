@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TheNoteTaker_WPF_UI.MVVM.Views
+namespace TheNoteTaker_WPF_UI
 {
     /// <summary>
-    /// Interaction logic for NoteView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class NoteView : UserControl
+    public partial class MainWindow : Window
     {
-        public NoteView()
+        public MainWindow()
         {
             InitializeComponent();
         }
