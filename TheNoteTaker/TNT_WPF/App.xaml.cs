@@ -18,7 +18,7 @@ namespace TNT_WPF
         IServiceProvider serviceProvider;
         protected override void OnStartup(StartupEventArgs e)
         {
-            IServiceProvider serviceProvider = CreateServiceProvider();
+            serviceProvider = CreateServiceProvider();
 
             base.OnStartup(e);
         }
