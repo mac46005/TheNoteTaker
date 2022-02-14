@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNT_WPF", "TNT_WPF\TNT_WPF.csproj", "{CCC985D8-D551-446D-899E-ADFAFE22A0F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TNT_ClassLib", "TNT_ClassLib\TNT_ClassLib.csproj", "{93F663BD-79D4-4ECC-B7C5-ECD2A20DC1C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess_ClassLib", "..\..\CSharpClassesCollection6\DataAccess_ClassLib\DataAccess_ClassLib.csproj", "{2BCD3483-4402-45BC-BF45-925A3D7FAC7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{CCC985D8-D551-446D-899E-ADFAFE22A0F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCC985D8-D551-446D-899E-ADFAFE22A0F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCC985D8-D551-446D-899E-ADFAFE22A0F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F663BD-79D4-4ECC-B7C5-ECD2A20DC1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F663BD-79D4-4ECC-B7C5-ECD2A20DC1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F663BD-79D4-4ECC-B7C5-ECD2A20DC1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F663BD-79D4-4ECC-B7C5-ECD2A20DC1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BCD3483-4402-45BC-BF45-925A3D7FAC7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BCD3483-4402-45BC-BF45-925A3D7FAC7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BCD3483-4402-45BC-BF45-925A3D7FAC7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BCD3483-4402-45BC-BF45-925A3D7FAC7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
