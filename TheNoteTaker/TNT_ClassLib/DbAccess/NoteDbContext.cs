@@ -11,6 +11,10 @@ namespace TNT_ClassLib.DbAccess
     public class NoteDbContext : DbContext
     {
         DbSet<NoteItem> NoteItems { get; set; }
-        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source TheNoteDB.db");
+        }
+
     }
 }
