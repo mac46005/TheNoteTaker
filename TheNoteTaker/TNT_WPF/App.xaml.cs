@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TNT_ClassLib.DbAccess;
 using TNT_WPF.MVVM.ViewModels;
 
 namespace TNT_WPF
@@ -27,7 +28,13 @@ namespace TNT_WPF
         private IServiceProvider CreateServiceProvider()
         {
             var services = new ServiceCollection();
-            services.AddScoped<IServiceProvider, IServiceProvider>();
+
+            // Data Access
+            services.AddDbContext<NoteDbContext>();
+
+
+
+            
             services.AddScoped<MainViewModel>();
 
 

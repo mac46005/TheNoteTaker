@@ -8,7 +8,7 @@ using TNT_ClassLib.Models;
 
 namespace TNT_WPF.MVVM.ViewModels
 {
-    public class NoteViewModel : BaseViewModel<ObservableCollection<INoteItem<int>>>
+    public class NoteViewModel : BaseViewModel<ObservableCollection<INoteItem>>
     {
         public NoteViewModel()
         {

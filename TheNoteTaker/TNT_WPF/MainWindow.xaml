@@ -5,8 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TNT_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch">
+                <Border.Background>
+                    <SolidColorBrush Color="DarkGray"/>
+                </Border.Background>
+                <Grid HorizontalAlignment="Stretch">
+                    <StackPanel HorizontalAlignment="Right">
+                        <Button Height="30"
+                                Width="30"/>
+                    </StackPanel>
+                </Grid>
+
+
+
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ContentControl Content="{Binding NoteView}"/>
+        </Grid>
 
     </Grid>
 </Window>

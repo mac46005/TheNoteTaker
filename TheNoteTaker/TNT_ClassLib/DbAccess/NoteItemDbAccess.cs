@@ -33,7 +33,7 @@ namespace TNT_ClassLib.DbAccess
             using (NoteDbContext context = _theNoteDbContextFactory.CreateDbContext())
             {
 
-                T? entity = await context.Set<T>().FindAsync(id);
+                var entity = await context.Set<T>().FindAsync(id);
                 context.Set<T>().Remove(entity);
                 context.SaveChanges();
                 return true;
@@ -46,19 +46,28 @@ namespace TNT_ClassLib.DbAccess
             {
 
 
-                T entity = await ctx.Set<T>().FirstOrDefaultAsync(e => e.ID == id);
-                return etity
+                T entity = await ctx.Set<T>().FirstOrDefaultAsync(e => e.ID.Equals(id));
+                return entity;
             }
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            using (NoteDbContext ctx = _theNoteDbContextFactory.CreateDbContext())
+            {
+                var list = await ctx.Set<T>().ToListAsync();
+                return list;
+            }
         }
 
-        public Task<T> Update(U id, T Entity)
+        public async Task<T> Update(U id, T Entity)
         {
-            throw new NotImplementedException();
+            using (NoteDbContext ctx = _theNoteDbContextFactory.CreateDbContext())
+            {
+                Entity.ID = id;
+                ctx.Set<T>().Update(Entity);
+                return await Task.FromResult(Entity);
+            }
         }
     }
 }
