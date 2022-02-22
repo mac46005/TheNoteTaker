@@ -16,7 +16,8 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Border HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch">
+                    VerticalAlignment="Stretch"
+                    MouseDown="Border_MouseDown">
                 <Border.Background>
                     <SolidColorBrush Color="DarkGray"/>
                 </Border.Background>

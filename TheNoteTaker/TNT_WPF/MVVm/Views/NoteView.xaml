@@ -12,7 +12,10 @@
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
         <ListView Grid.Row="0"/>
-        <TextBox Grid.Row="1"/>
-
+        <TextBox Grid.Row="1">
+            <TextBox.InputBindings>
+                <KeyBinding Command="{Binding SubmitCommand}" Key="Return"/>
+            </TextBox.InputBindings>
+        </TextBox>
     </Grid>
 </UserControl>
