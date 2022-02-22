@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace TNT_WPF.MVVM.ViewModels
 {
-    internal class MainViewModel : BaseViewModel<int>
+    internal class MainViewModel : BaseViewModel<NoteViewModel>
     {
-        public MainViewModel()
+        public MainViewModel(NoteViewModel noteViewModel)
         {
-
+            Model = noteViewModel;
+            NoteView = Model;
         }
+
+        private NoteViewModel noteViewModel1;
+
+        public NoteViewModel NoteView
+        {
+            get { return noteViewModel1; }
+            set { noteViewModel1 = value; }
+        }
+
     }
 }

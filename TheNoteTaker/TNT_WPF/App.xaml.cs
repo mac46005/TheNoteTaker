@@ -20,7 +20,9 @@ namespace TNT_WPF
         protected override void OnStartup(StartupEventArgs e)
         {
             serviceProvider = CreateServiceProvider();
-
+            Window window = new MainWindow();
+            window.DataContext = serviceProvider.GetRequiredService<MainViewModel>();
+            window.Show();
             base.OnStartup(e);
         }
 
@@ -37,6 +39,7 @@ namespace TNT_WPF
             
             services.AddScoped<MainViewModel>();
 
+            services.AddTransient<NoteViewModel>();
 
 
 
