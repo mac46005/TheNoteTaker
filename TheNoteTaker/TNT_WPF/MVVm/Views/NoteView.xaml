@@ -11,8 +11,20 @@
             <RowDefinition/>
             <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="0"/>
-        <TextBox Grid.Row="1">
+        <ListView Grid.Row="0" ItemsSource="{Binding Model}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid HorizontalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Note}"/>
+                            <Label Content="{Binding TimePosted}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <TextBox Grid.Row="1"
+                 Text="{Binding NoteMessage,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
             <TextBox.InputBindings>
                 <KeyBinding Command="{Binding SubmitCommand}" Key="Return"/>
             </TextBox.InputBindings>

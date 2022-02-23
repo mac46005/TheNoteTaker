@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using TNT_ClassLib.DbAccess;
+using TNT_ClassLib.Models;
 using TNT_WPF.MVVM.ViewModels;
 
 namespace TNT_WPF
@@ -35,13 +36,14 @@ namespace TNT_WPF
             services.AddDbContext<NoteDbContext>();
 
 
-
+            //ViewModels
             
             services.AddScoped<MainViewModel>();
 
             services.AddTransient<NoteViewModel>();
 
-
+            // Models
+            services.AddTransient<INoteItem, NoteItem>();
 
             return services.BuildServiceProvider();
         }
