@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TNT_ClassLib.Models;
 using DataAccess_ClassLib.Interfaces;
 using DataAccess_ClassLib.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TNT_ClassLib.DbAccess
 {

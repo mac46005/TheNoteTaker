@@ -13,7 +13,8 @@ namespace TNT_ClassLib.DbAccess
         public NoteDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<NoteDbContext>();
-            options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=TheNoteTake_DB;Trusted_Connection=True");
+            options.UseSqlite($"DataSource={Environment.CurrentDirectory}\\" + "NoteDb.db");
+            //options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=TheNoteTake_DB;Trusted_Connection=True");
             return new NoteDbContext(options.Options);
         }
     }
