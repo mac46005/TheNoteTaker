@@ -20,4 +20,10 @@
     <ProjectReference Include="..\TNT_ClassLib\TNT_ClassLib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="DataAccess_ClassLib">
+      <HintPath>..\..\..\..\..\CSharpClassesCollection6\DataAccess_ClassLib\bin\Debug\net6.0\DataAccess_ClassLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
