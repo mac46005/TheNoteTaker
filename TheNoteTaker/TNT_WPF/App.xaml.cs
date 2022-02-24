@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using DataAccess_ClassLib.Interfaces;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -34,7 +36,7 @@ namespace TNT_WPF
 
             // Data Access
             services.AddDbContext<NoteDbContext>();
-
+            services.AddTransient<IDataService<NoteItem,int>,NoteItemDbAccess<NoteItem,int>>()
 
             //ViewModels
             

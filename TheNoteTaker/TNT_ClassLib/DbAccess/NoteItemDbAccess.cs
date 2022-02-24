@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TNT_ClassLib.DbAccess
 {
-    internal class NoteItemDbAccess<T,U> : IDataService<T,U> where T : BaseModel<U>
+    public class NoteItemDbAccess<T,U> : IDataService<T,U> where T : BaseModel<U>
     {
         TheNoteDbContextFactory _theNoteDbContextFactory;
         public NoteItemDbAccess(TheNoteDbContextFactory theNoteDbContextFactory)
